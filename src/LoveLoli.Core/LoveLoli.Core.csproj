@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <PropertyGroup>
+    <Description>Core lib for we love loli projects</Description>
+    <Copyright>weloveloli</Copyright>
+    <AssemblyTitle>LoveLoli</AssemblyTitle>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>weloveloli</Authors>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <AssemblyName>LoveLoli.Core</AssemblyName>
+    <PackageId>LoveLoli.Core</PackageId>
+    <PackageTags>virtual;abstract;directory;files;io;mock</PackageTags>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/weloveloli/LoveLoli.Core</PackageProjectUrl>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+    <LangVersion>9</LangVersion>
+    <PackageIconUrl>logo.jpg</PackageIconUrl>
+    <!--Add support for sourcelink-->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../img/logo.jpg" Pack="true" PackagePath="" />
+    <None Include="../../readme.md" Pack="true" PackagePath="/"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+
+  </ItemGroup>
+  
+  <Target Name="PatchVersion" AfterTargets="MinVer">
+    <PropertyGroup>
+      <!--The minor version is like a major version because Major is 0, need to remove this when will be >= 1.0-->
+      <AssemblyVersion>$(MinVerMajor).$(MinVerMinor).0.0</AssemblyVersion>
+    </PropertyGroup>
+  </Target>
+
+</Project>
