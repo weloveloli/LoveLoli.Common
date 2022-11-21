@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 
   <PropertyGroup>
-    <Description>Core lib for we love loli projects</Description>
+    <Description>Common lib for we love loli projects</Description>
     <Copyright>weloveloli</Copyright>
     <AssemblyTitle>LoveLoli</AssemblyTitle>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Authors>weloveloli</Authors>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
-    <AssemblyName>LoveLoli.Core</AssemblyName>
-    <PackageId>LoveLoli.Core</PackageId>
+    <AssemblyName>LoveLoli.Common</AssemblyName>
+    <PackageId>LoveLoli.Common</PackageId>
     <PackageTags>virtual;abstract;directory;files;io;mock</PackageTags>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/weloveloli/LoveLoli.Core</PackageProjectUrl>
