@@ -1,8 +1,6 @@
 ﻿namespace LoveLoli.Common.Plugins
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// This is a serializable stub class that is used by the api to provide information about installed plugins.

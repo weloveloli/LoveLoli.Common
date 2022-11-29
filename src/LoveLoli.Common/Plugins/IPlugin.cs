@@ -5,7 +5,7 @@
     /// <summary>
     /// Defines the <see cref="IPlugin" />.
     /// </summary>
-    public interface IPlugins
+    public interface IPlugin
     {
         /// <summary>
         /// Gets the name of the plugin.
