@@ -10,7 +10,7 @@
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AssemblyName>LoveLoli.Common</AssemblyName>
     <PackageId>LoveLoli.Common</PackageId>
-    <PackageTags>virtual;abstract;directory;files;io;mock</PackageTags>
+    <PackageTags>utils;plugins</PackageTags>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/weloveloli/LoveLoli.Core</PackageProjectUrl>
     <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
@@ -28,6 +28,7 @@
     <None Include="../../readme.md" Pack="true" PackagePath="/" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="MimeTypes" Version="2.4.0">
       <PrivateAssets>all</PrivateAssets>

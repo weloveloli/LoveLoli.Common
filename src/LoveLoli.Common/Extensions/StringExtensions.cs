@@ -2,6 +2,7 @@ namespace LoveLoli.Common.Extensions
 {
     using System;
     using System.Globalization;
+    using System.Security.Cryptography;
     using System.Text;
     using System.Text.RegularExpressions;
 
@@ -101,6 +102,22 @@ namespace LoveLoli.Common.Extensions
             }
 
             return haystack[(pos + 1)..];
+        }
+
+        /// <summary>
+        /// Gets the Md5.
+        /// </summary>
+        /// <param name="str">The string.</param>
+        /// <returns><see cref="Guid" />.</returns>
+        public static Guid GetMD5(this string str)
+        {
+#pragma warning disable CA5351
+            using (var provider = MD5.Create())
+            {
+                return new Guid(provider.ComputeHash(Encoding.Unicode.GetBytes(str)));
+            }
+
+#pragma warning restore CA5351
         }
     }
 }

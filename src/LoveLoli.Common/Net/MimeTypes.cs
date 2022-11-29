@@ -152,7 +152,7 @@ namespace LoveLoli.Common.Net
                 return result;
             }
 
-            if (Common.MimeTypes.TryGetMimeType(filename, out var mimeType))
+            if (LoveLoli.Common.MimeTypes.TryGetMimeType(filename, out var mimeType))
             {
                 return mimeType;
             }
@@ -181,7 +181,7 @@ namespace LoveLoli.Common.Net
                 return result;
             }
 
-            var extension = Common.MimeTypes.GetMimeTypeExtensions(mimeType).FirstOrDefault();
+            var extension = LoveLoli.Common.MimeTypes.GetMimeTypeExtensions(mimeType).FirstOrDefault();
             return string.IsNullOrEmpty(extension) ? null : "." + extension;
         }
     }
